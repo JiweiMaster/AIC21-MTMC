@@ -16,7 +16,7 @@ sklearn
 lap
 cython-bbox
 timm
-
+numba
 # logging -------------------------------------
 # wandb
 

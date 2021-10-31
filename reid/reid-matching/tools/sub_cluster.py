@@ -168,3 +168,4 @@ if __name__ == '__main__':
         for c in c_list:
             cid_tid_label[c] = i + 1
     pickle.dump({'cluster': cid_tid_label}, open('test_cluster.pkl', 'wb'))
+    print('test_cluster.pkl save success...')

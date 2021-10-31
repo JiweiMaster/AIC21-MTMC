@@ -6,3 +6,5 @@ exp/
 *.pth
 *.png
 *.pkl
+datasets
+exp

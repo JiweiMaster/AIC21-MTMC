@@ -57,7 +57,6 @@ if __name__ == '__main__':
     cam_paths = list(filter(lambda x: 'c' in x, cam_paths))
     cam_paths.sort()
     zones = zone()
-
     for cam_path in cam_paths:
         print('processing {}...'.format(cam_path))
         cid = int(cam_path[-3:])
@@ -65,7 +64,6 @@ if __name__ == '__main__':
         cur_bias = cid_bias[cid]
         mot_path = opj(data_dir, cam_path,'{}_mot_feat.pkl'.format(cam_path))
         new_mot_path = opj(data_dir, cam_path, '{}_mot_feat_break.pkl'.format(cam_path))
-        print(new_mot_path)
         zones.set_cam(cid)
         mot_list = parse_pt(mot_path,zones)
         mot_list = zones.break_mot(mot_list, cid)

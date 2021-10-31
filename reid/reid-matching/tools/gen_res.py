@@ -36,7 +36,8 @@ if __name__ == '__main__':
     cfg.freeze()
     data_dir = cfg.DATA_DIR
     roi_dir = cfg.ROI_DIR
-
+    print("查看当前的路径： see current path => ")
+    os.system("pwd")
     map_tid = pickle.load(open('test_cluster.pkl', 'rb'))['cluster']
     show_res(map_tid)
     f_w = open(cfg.MCMT_OUTPUT_TXT, 'w')
